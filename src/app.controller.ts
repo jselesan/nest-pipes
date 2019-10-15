@@ -13,7 +13,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  @UsePipes( new ValidationPipe( { transform: true, whitelist: true }))
+  @UsePipes( new ValidationPipe( { transform: true }))
   getHello(@Query() testDto: TestDto): TestDto {
     return testDto;
   }
